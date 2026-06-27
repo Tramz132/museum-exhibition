@@ -1,0 +1,131 @@
+// Data Akun Simulasi
+export const users = {
+  'panitia@museum.id': {
+    email: 'panitia@museum.id',
+    password: '123456',
+    name: 'Siti Rahma',
+    role: 'PANITIA',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
+  },
+  'staf@museum.id': {
+    email: 'staf@museum.id',
+    password: '123456',
+    name: 'Heri Kurniawan',
+    role: 'STAF',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150',
+  },
+  'admin@museum.id': {
+    email: 'admin@museum.id',
+    password: '123456',
+    name: 'Super Admin',
+    role: 'ADMIN',
+    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150',
+  },
+};
+
+// Data Barang Awal (Minimal 6 Barang)
+export const initialItems = [
+  {
+    id: 1,
+    name: 'Keris Pusaka Sangupati',
+    category: 'Senjata',
+    origin: 'Jawa',
+    year: 'Abad 17',
+    status: 'Tersedia', // Tersedia, Dipinjam, Perbaikan
+    image: 'https://images.unsplash.com/photo-1615214081014-cb9045b850a5?w=500&auto=format&fit=crop&q=60',
+    description: 'Keris bersejarah dengan pamor beras wutah dari era Mataram Islam, melambangkan kesuburan dan perlindungan.',
+  },
+  {
+    id: 2,
+    name: 'Prasasti Batu Tulis',
+    category: 'Prasasti',
+    origin: 'Jawa Barat',
+    year: 'Abad 16',
+    status: 'Dipinjam',
+    image: 'https://images.unsplash.com/photo-1607582544253-8356976865bf?w=500&auto=format&fit=crop&q=60',
+    description: 'Prasasti batu bertuliskan aksara Sunda Kuno yang dibuat oleh Prabu Surawisesa untuk menghormati Sri Baduga Maharaja.',
+  },
+  {
+    id: 3,
+    name: 'Arca Ganesha Singhasari',
+    category: 'Patung',
+    origin: 'Jawa Timur',
+    year: 'Abad 13',
+    status: 'Tersedia',
+    image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=500&auto=format&fit=crop&q=60',
+    description: 'Arca batu Dewa Ganesha peninggalan Kerajaan Singhasari yang duduk di atas landasan tengkorak (Candra Kapala).',
+  },
+  {
+    id: 4,
+    name: 'Mahkota Emas Majapahit',
+    category: 'Perhiasan',
+    origin: 'Jawa Timur',
+    year: 'Abad 14',
+    status: 'Perbaikan',
+    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&auto=format&fit=crop&q=60',
+    description: 'Mahkota kerajaan berlapis emas murni dengan detail ukiran halus yang melambangkan kekuasaan dinasti Majapahit.',
+  },
+  {
+    id: 5,
+    name: 'Kitab Negarakertagama',
+    category: 'Manuskrip',
+    origin: 'Bali',
+    year: 'Abad 14',
+    status: 'Tersedia',
+    image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=60',
+    description: 'Naskah manuskrip daun lontar kakawin karangan Mpu Prapanca yang menceritakan kondisi puncak kejayaan Majapahit.',
+  },
+  {
+    id: 6,
+    name: 'Koin Emas Samudra Pasai',
+    category: 'Mata Uang',
+    origin: 'Aceh',
+    year: 'Abad 13',
+    status: 'Tersedia',
+    image: 'https://images.unsplash.com/photo-1618042164219-62c820f10723?w=500&auto=format&fit=crop&q=60',
+    description: 'Mata uang dirham emas kuno peninggalan Kesultanan Samudra Pasai, bertuliskan kaligrafi nama sultan yang berkuasa.',
+  },
+];
+
+// Data Pengajuan Peminjaman Awal (Minimal 3 Transaksi)
+export const initialLoans = [
+  {
+    id: 1,
+    barangId: 2,
+    namaBarang: 'Prasasti Batu Tulis',
+    namaAcara: 'Pameran Budaya Nusantara 2026',
+    lokasi: 'Gedung Merdeka, Bandung',
+    tanggalMulai: '2026-07-01',
+    tanggalSelesai: '2026-07-10',
+    peminjam: 'Siti Rahma',
+    role: 'PANITIA',
+    status: 'Approved', // Pending, Approved, Rejected
+    tanggalPengajuan: '2026-06-20',
+  },
+  {
+    id: 2,
+    barangId: 3,
+    namaBarang: 'Arca Ganesha Singhasari',
+    namaAcara: 'Eksposisi Arkeologi Jawa',
+    lokasi: 'Museum Sonobudoyo, Yogyakarta',
+    tanggalMulai: '2026-08-15',
+    tanggalSelesai: '2026-08-25',
+    peminjam: 'Siti Rahma',
+    role: 'PANITIA',
+    status: 'Pending',
+    tanggalPengajuan: '2026-06-25',
+  },
+  {
+    id: 3,
+    barangId: 5,
+    namaBarang: 'Kitab Negarakertagama',
+    namaAcara: 'Pameran Sastra & Manuskrip Kuno',
+    lokasi: 'Perpustakaan Nasional, Jakarta',
+    tanggalMulai: '2026-09-01',
+    tanggalSelesai: '2026-09-10',
+    peminjam: 'Siti Rahma',
+    role: 'PANITIA',
+    status: 'Pending',
+    tanggalPengajuan: '2026-06-27',
+  },
+];
